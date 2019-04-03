@@ -98,7 +98,7 @@ def create_output(
 
 def write_report(filename: str, output: List[Dict[str, Any]]) -> None:
     """Write a list of dictionary objects to a csv file."""
-    with open(filename, "wt", newline='') as fout:
+    with open(filename, "wt", newline="") as fout:
         writer = csv.DictWriter(fout, fieldnames=list(output[0].keys()))
         writer.writeheader()
         writer.writerows(output)
